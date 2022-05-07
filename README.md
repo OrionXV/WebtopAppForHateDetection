@@ -29,7 +29,7 @@ DETAILED STATISTIC.
 
 ## Members
 - Syed Arsalaan Nadim (Team Leader)
-- Keshav Reddy 
+- Keshav Reddy (Choutipalli Kesava Kumar Reddy)
 - Rijurekh Halder 
 - Navarun Mallick
 - Anshuman Harichandan
