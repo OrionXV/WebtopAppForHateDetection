@@ -175,7 +175,7 @@ def main():
         raise Exception("DATA NOT FOUND")
     
     data_path = path + '/' + result[0]
-    data = pd.read_csv(data_path, usecols = [ 'id', 'link', 'text'])  
+    data = pd.read_csv(data_path, usecols = [ 'id', 'text'])  
     #temp = data.copy()
     data['orignal_text'] = data['text']
     data['text'].apply(lambda x: textCleaner(x))
