@@ -32,4 +32,4 @@ DETAILED STATISTIC.
 - Choutipalli Kesava Kumar Reddy
 - Rijurekh Halder 
 - Navarun Mallick
-- Anshuman Kahnu Harichandan
+
