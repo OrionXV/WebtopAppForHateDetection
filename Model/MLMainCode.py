@@ -159,7 +159,7 @@ def evaluater(model, test_data):
             #acc = (output.argmax(dim=1) == test_label).sum().item()
             #total_acc_test += acc
     test['label'] = Submission
-    test['Chance'] = Chance
+    test['chance'] = Chance
     return test
   
   
