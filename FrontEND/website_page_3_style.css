@@ -1,0 +1,9 @@
+body{
+  background-image: url('Images/Background\ page-1.png');
+  background-repeat: no-repeat;
+  background-size: 1370px 630px;
+}
+.hackfestlogo {
+  width: 120px;
+  height: 120px;
+}

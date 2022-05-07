@@ -1,0 +1,59 @@
+body{
+  background-image: url('Images/Background\ page-1.png');
+  background-repeat: no-repeat;
+  background-size: 1370px 630px;
+}
+.hackfestlogo {
+  width: 120px;
+  height: 120px;
+}
+.container-button {
+  text-align: center;
+  display: block
+}
+.container-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-title {
+  border: 4px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 400px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: burlywood;
+  text-align: center;
+}
+.main-title-line2 {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+.main-title-line3 {
+  font-size: 40px;
+  text-align: center;
+  color: peru;
+  text-decoration: underline;
+}
+.Get-Started-Button {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  font-size: larger;
+  text-align: center;
+  color: black;
+  display: inline-block;
+  border-radius: 18px;
+  transition: color 0.45s , background-colour 0.45s;
+}
+.Get-Started-Button:hover {
+  color: azure;
+  background-color: rgb(38, 33, 63);
+}
