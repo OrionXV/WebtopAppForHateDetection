@@ -3,17 +3,16 @@ import urllib.request
 import pandas as pd
 from urllib.error import HTTPError, URLError
 
-def scrapper(text):
-    #tag = '<p>'
-    #pattern = re.compile("{}.*".format(tag))
-    #m = pattern.findall(text) 
-    m = re.sub(r'<.*>', '', text)
+def scrapper(text, tag = '<p>'):
+    pattern = re.compile("{}.*".format(tag))
+    m = pattern.findall(text) 
+    #m = re.sub(r'<.*>', '', text)
     df = pd.DataFrame(columns=['id', 'text'])
     text_data = []
     id_data = []
     for i, x in enumerate(m):
         id_data.append(i)
-        text_data.append(x)
+        text_data.append(x.replace('</p>', ''))
     df['id'] = id_data
     df['text'] = text_data
 
