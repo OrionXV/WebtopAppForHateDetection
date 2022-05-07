@@ -165,7 +165,7 @@ def evaluater(model, test_data):
   
 ###################### MAIN CODE ######################
   
-def main():
+def mainFunc():
     path = Path.cwd().parent
     extension = 'csv' #Can be changed to include JSON
     path = path / 'input'
@@ -205,8 +205,8 @@ def main():
     else:
         raise Exception("MODEL OR MODEL WEIGHTS ARE NOT PRESENT IN THE DIRECTORY")
     
+    data['label'] = np.nan
+    
     submission = evaluater(model, data)
     
     submission.to_csv('/output/results.csv')
-    
-        

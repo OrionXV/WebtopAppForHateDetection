@@ -3,7 +3,7 @@
 import speech_recognition as sr
 #Initiаlize  reсоgnizer  сlаss  (fоr  reсоgnizing  the  sрeeсh)
 
-def audioToText(filepath)
+def audioToText(filepath):
     r = sr.Recognizer()
     # Reading Audio file as source
     #  listening  the  аudiо  file  аnd  stоre  in  аudiо_text  vаriаble
