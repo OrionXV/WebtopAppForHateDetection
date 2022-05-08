@@ -3,7 +3,7 @@ from Model.generalCase import generalCaseScraping
 import generalCase
 import MLMainCode
 
-f = open("Model\\input\\url.txt", 'r')
+f = open("Model\\temp\\url.txt", 'r')
 link = f.readline()
 
 generalCaseScraping(link)
