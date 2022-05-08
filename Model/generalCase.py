@@ -34,7 +34,7 @@ def scrapper(text):
     df['text'] = text_data
 
     return df
-def genralCaseScrapin(link):
+def generalCaseScraping(link):
     website = link #input("Enter the website with http/https tag :")
     config = pdfkit.configuration(wkhtmltopdf='C:\Program Files\wkhtmltopdf\\bin\wkhtmltopdf.exe')
     try:
