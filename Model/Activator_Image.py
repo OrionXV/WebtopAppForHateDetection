@@ -10,6 +10,7 @@ import numpy as np
 import imageToText
 
 path = Path.cwd().parent
+path = path.parent
 extension = ('jpg', 'jpeg', 'png', 'gif') #Can be changed to include JSON
 path = path / 'Model' / 'img_data'
 os.chdir(path)
