@@ -166,7 +166,8 @@ def evaluater(model, test_data):
 ###################### MAIN CODE ######################
   
 def mainFunc():
-    path = Path().cwd()
+    path = Path.cwd()
+    #path = path
     extension = 'csv' #Can be changed to include JSON 
     path = path / 'Model'/ 'input'
     os.chdir(path)
@@ -187,14 +188,13 @@ def mainFunc():
     #data = temp.copy()
     #del temp
     
-    newpath = Path('/Model')
+    newpath = Path('Model') 
     newpath = newpath / 'Model'
     extension = 'pt'
     os.chdir(newpath)
     modelPresent = glob.glob('*.{}'.format(extension))
     
     extension = 'pth'
-    os.chdir(newpath)
     modelWeightsPresent = glob.glob('*.{}'.format(extension))
     
     if modelPresent:
