@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@300&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-image: url(Images/background_image_2.png);
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  color: white;
+}
+.grow {
+  display: flex;
+  flex-direction: column;
+}
+.hackfest-logo{
+  height: 110px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  font-size: 1.25em;
+  color: inherit;
+  text-decoration: none;
+}
+.hackfest-logo-name {
+  font-size: large;
+  margin-left: 20px;
+  display: flex;
+}
+.hackfest-logo-name:hover  {
+  color: #8b79db;
+  transform: scale(1.1);
+}
+.main-navigation ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-navigation a {
+  color: inherit;
+  text-decoration: none;
+  padding: 1rem;
+}
+.main-navigation a:hover  {
+  color: #6f7030;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  max-width: 1400px;
+  margin: auto auto;
+  padding: 8px 20px;
+  flex-grow: 1;
+}
+.github-logo{
+  width: 32px;
+  height: 32px;
+}
