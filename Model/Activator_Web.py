@@ -1,11 +1,13 @@
 """from Model.MLMainCode""" 
-import mainFunc
 """from Model.generalCase """
-import generalCaseScraping
 import generalCase
 import MLMainCode
+from pathlib import Path
 
-f = open("Model\\temp\\url.txt", 'r')
+path = Path.cwd()
+print(path)
+
+f = open(path / 'Temp' / 'url.txt', 'r')
 link = f.readline()
 
 generalCase.generalCaseScraping(link)
