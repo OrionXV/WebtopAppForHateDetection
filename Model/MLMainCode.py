@@ -166,8 +166,8 @@ def evaluater(model, test_data):
 ###################### MAIN CODE ######################
   
 def mainFunc():
-    path = Path.cwd().parent
-    extension = 'csv' #Can be changed to include JSON
+    path = Path('./')
+    extension = 'csv' #Can be changed to include JSON 
     path = path / 'Model'/ 'input'
     os.chdir(path)
     result = glob.glob('*.{}'.format(extension))
