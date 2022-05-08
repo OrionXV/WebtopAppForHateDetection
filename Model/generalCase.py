@@ -36,9 +36,9 @@ def scrapper(text):
     return df
 def generalCaseScraping(link):
     website = link #input("Enter the website with http/https tag :")
-    #config = pdfkit.configuration(wkhtmltopdf='C:\Program Files\wkhtmltopdf\\bin\wkhtmltopdf.exe')
+    config = pdfkit.configuration(wkhtmltopdf='C:\Program Files\wkhtmltopdf\\bin\wkhtmltopdf.exe')
     try:
-        pdfkit.from_url(website, "WebScraper/temp/website.pdf") #, configuration=config) 
+        pdfkit.from_url(website, "WebScraper/temp/website.pdf", configuration=config) 
     except HTTPError as e:
         print(e)
     except URLError:

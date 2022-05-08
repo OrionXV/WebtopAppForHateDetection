@@ -7,7 +7,7 @@ from pathlib import Path
 path = Path.cwd()
 print(path)
 
-f = open(path / 'Temp' / 'url.txt', 'r')
+f = open('Model\\temp\\url.txt', 'r')
 link = f.readline()
 
 generalCase.generalCaseScraping(link)

@@ -17,23 +17,20 @@ import torch
 
 import re
 from nltk.corpus import stopwords
-from wordcloud import WordCloud, STOPWORDS
-import spacy
+
 import contractions
 
 from torch import nn
 from transformers import BertModel
 
 from transformers import BertTokenizer
-tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
-
 
 ###################### CLASSES  ######################
 
 class Dataset(torch.utils.data.Dataset):
 
     def __init__(self, df):
-        
+        tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
         self.labels = list(df['label'])
         self.texts =[tokenizer(
             text, 
@@ -109,6 +106,8 @@ def textCleaner(mystring):
     return re.sub(r"^\W+", "", mystring)
 
 def textCleaner_adv(mystring):
+    from wordcloud import WordCloud, STOPWORDS
+    import spacy
     newstring = " ".join(x.lower() for x in mystring.split())
     
     newstring = newstring.replace('[^\w\s]','')
@@ -196,10 +195,12 @@ def mainFunc():
     
     extension = 'pth'
     modelWeightsPresent = glob.glob('*.{}'.format(extension))
+    
     from torch import nn
     from transformers import BertModel
     from transformers import BertTokenizer
     from MLMainCode import BertClassifier
+
     if modelPresent:
         model = torch.load(newpath / modelPresent[0])
     elif modelWeightsPresent:
