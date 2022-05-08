@@ -1,6 +1,6 @@
-!pip instal PyPDF2
-!pip install pdfkit
-!sudo apt-get install wkhtmltopdf
+#!pip instal PyPDF2
+#!pip install pdfkit
+#!sudo apt-get install wkhtmltopdf
 
 import re 
 import pandas as pd
@@ -8,7 +8,8 @@ from urllib.error import HTTPError, URLError
 import pdfkit
 import pathlib as pl
 import os
-import PyPDF2
+#import PyPDF2
+import pdfplumber
 
 def get_files(folder):
     import os
@@ -26,7 +27,7 @@ def scrapper(text):
     df = pd.DataFrame(columns=['id', 'text'])
     text_data = []
     id_data = []
-    for i, x in enumerate(text):
+    for i, x in enumerate(text.split('\n')):
         id_data.append(i)
         text_data.append(x)
     df['id'] = id_data
@@ -35,7 +36,7 @@ def scrapper(text):
     return df
 
 website = input("Enter the website with http/https tag :")
-#config = pdfkit.configuration(wkhtmltopdf='C:\Program Files\wkhtmltopdf\\bin\wkhtmltopdf.exe')
+config = pdfkit.configuration(wkhtmltopdf='C:\Program Files\wkhtmltopdf\\bin\wkhtmltopdf.exe')
 try:
     pdfkit.from_url(website, "WebScraper/website.pdf", configuration=config) 
 except HTTPError as e:
@@ -44,15 +45,18 @@ except URLError:
     print("Server down or Incorrect domain")
 
 else:
-    pdffileobj=open("WebScraper/website.pdf",'rb')
     
-    pdfreader=PyPDF2.PdfFileReader(pdffileobj)
     
-    comp = []
-    for page in pdfreader.pages:
-        print(page.extractText())
-        text=page.extractText()
-        comp.append(text)
-
-    final_frame = scrapper(comp)
+    with pdfplumber.open(r"WebScraper/website.pdf") as pdf:
+        first_page = pdf.pages[0]
+        print(first_page.extract_text())
+        #comp = []
+        #for page in pdf.pages:
+            #print(page.extractText())
+            #page = pdf.pages[i]
+            #text = page.extractText()
+        #comp.append()
+        text = first_page.extract_text()
+    
+    final_frame = scrapper(text)
     final_frame.to_csv('Model\input\sampleInput.csv', index= True)
