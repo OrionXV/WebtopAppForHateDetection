@@ -25,27 +25,26 @@
       <div class="vl"></div>
       <div class="left_section">
         <div class="link"><p>Link for Web Scraping</p>
-          <form action="input_web.php" method = "post">
-            <input name="Web_Scraping_link"/>
-            <input type="submit" name="Go" value="Go"/>
-          </form>
+          <input type="text" placeholder="Insert Link Here" class="text_box">
+          <button class="button">Go</button>
         </div>
         <hr class="leftline">
         <div class="csv">
           <header>Upload CSV File</header>
-          <input type="file" id="fileUpload" /><input type="button" id="upload" value="Upload" onclick="Upload()" /><div id="dvCSV"></div>
+          <input type="file" id="fileUpload" multiple class="button1" /><input type="button" id="upload" value="Upload" onclick="Upload()" class="button1" /><div id="dvCSV"></div>
         </div>
       </div>
       <div class="right_section">
         <div class="audio">
           <header>Upload audio</header>
-          <input type="file" id="fileUpload" /><input type="button" id="upload" value="Upload" onclick="Upload()" /><div id="dvCSV"></div>
+            <input type="file" id="fileUpload" multiple class="button1" /><input type="button" id="upload" value="Upload" onclick="Upload()" class="button1"/><div id="dvaudio"></div>
         </div><br>
         <hr class="rightline">
         <div class="image">
           <header>Upload Image(s)</header>
-          <input type="file" id="fileUpload" /><input type="button" id="upload" value="Upload" onclick="Upload()" /><div id="dvCSV"></div>
+          <input type="file" id="fileUpload" multiple class="button1" /><input type="button" id="upload" value="Upload" onclick="Upload()" class="button1" /><div id="dvimages"></div>
         </div>
     </section>
+    <script src="input.js"></script>
 </body>
 </html>
