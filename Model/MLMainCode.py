@@ -199,8 +199,8 @@ def mainFunc():
     from torch import nn
     from transformers import BertModel
     from transformers import BertTokenizer
-    from MLMainCode import BertClassifier
-
+    #from MLMainCode import BertClassifier
+    model = BertClassifier()
     if modelPresent:
         model = torch.load(newpath / modelPresent[0])
     elif modelWeightsPresent:
