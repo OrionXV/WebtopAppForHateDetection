@@ -188,8 +188,8 @@ def mainFunc():
     #data = temp.copy()
     #del temp
     
-    newpath = Path('Model') 
-    newpath = newpath / 'Model'
+    newpath = Path.cwd().parent
+    newpath = newpath / 'Model' 
     extension = 'pt'
     os.chdir(newpath)
     modelPresent = glob.glob('*.{}'.format(extension))
