@@ -1,6 +1,6 @@
-#!pip instal PyPDF2
-#!pip install pdfkit
-#!sudo apt-get install wkhtmltopdf
+!pip instal PyPDF2
+!pip install pdfkit
+!sudo apt-get install wkhtmltopdf
 
 import re 
 import pandas as pd
@@ -35,7 +35,7 @@ def scrapper(text):
     return df
 
 website = input("Enter the website with http/https tag :")
-config = pdfkit.configuration(wkhtmltopdf='C:\Program Files\wkhtmltopdf\\bin\wkhtmltopdf.exe')
+#config = pdfkit.configuration(wkhtmltopdf='C:\Program Files\wkhtmltopdf\\bin\wkhtmltopdf.exe')
 try:
     pdfkit.from_url(website, "WebScraper/website.pdf", configuration=config) 
 except HTTPError as e:
