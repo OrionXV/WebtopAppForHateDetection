@@ -168,12 +168,12 @@ def evaluater(model, test_data):
 def mainFunc():
     path = Path.cwd().parent
     extension = 'csv' #Can be changed to include JSON
-    path = path / 'input'
+    path = path / 'Model'/ 'input'
     os.chdir(path)
     result = glob.glob('*.{}'.format(extension))
     if not result:
         raise Exception("DATA NOT FOUND")
-    
+    print(result)
     data_path = path / result[0]
     data = pd.read_csv(data_path, usecols = [ 'id', 'text'])  
     #temp = data.copy()
@@ -187,21 +187,21 @@ def mainFunc():
     #data = temp.copy()
     #del temp
     
-    path = Path.cwd()
-    path = path / 'Model'
+    newpath = Path('/Model')
+    newpath = newpath / 'Model'
     extension = 'pt'
-    os.chdir(path)
+    os.chdir(newpath)
     modelPresent = glob.glob('*.{}'.format(extension))
     
     extension = 'pth'
-    os.chdir(path)
+    os.chdir(newpath)
     modelWeightsPresent = glob.glob('*.{}'.format(extension))
     
     if modelPresent:
-        model = torch.load(path / modelPresent[0])
+        model = torch.load(newpath / modelPresent[0])
     elif modelWeightsPresent:
         model = BertClassifier()
-        model.load_state_dict(torch.load(path / modelWeightsPresent[0]))    
+        model.load_state_dict(torch.load(newpath / modelWeightsPresent[0]))    
     else:
         raise Exception("MODEL OR MODEL WEIGHTS ARE NOT PRESENT IN THE DIRECTORY")
     

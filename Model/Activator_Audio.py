@@ -7,9 +7,9 @@ import numpy as np
 #from Model.MLMainCode import mainFunc
 import audioToText
 
-path = Path.cwd()
+path = Path.cwd().parent
 extension = ('mp3', 'wav', 'aac', 'flac') #Can be changed to include JSON
-path = path / 'aud_data'
+path = path / 'Model' / 'aud_data'
 os.chdir(path)
 audioList = glob.glob('*.{}'.format(extension))
 if not audioList:

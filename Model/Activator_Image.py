@@ -9,9 +9,9 @@ import numpy as np
 """from Model.imageToText""" 
 import imageToText
 
-path = Path.cwd()
+path = Path.cwd().parent
 extension = ('jpg', 'jpeg', 'png', 'gif') #Can be changed to include JSON
-path = path / 'img_data'
+path = path / 'Model' / 'img_data'
 os.chdir(path)
 imagesList = glob.glob('*.{}'.format(extension))
 if not imagesList:

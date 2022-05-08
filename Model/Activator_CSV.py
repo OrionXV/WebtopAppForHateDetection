@@ -7,9 +7,9 @@ import numpy as np
 
 #from Model.MLMainCode import mainFunc
 
-path = Path.cwd()
+path = Path.cwd().parent
 extension = 'csv' #Can be changed to include JSON
-path = path / 'input'
+path = path / 'Model' / 'input'
 os.chdir(path)
 result = glob.glob('*.{}'.format(extension))
 if not result:
