@@ -1,54 +1,54 @@
-,Unnamed: 0,Unnamed: 0.1,Unnamed: 0.1.1,Unnamed: 0.1.1.1,id,text
-0,0,0,0,0,0,3.10.4
-1,1,1,1,1,1,6. Modules
-2,2,2,2,2,2,    Go
-3,3,3,3,3,3,"If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables) are lost. Therefore, if"
-4,4,4,4,4,4,"you want to write a somewhat longer program, you are better off using a text editor to prepare the input for the interpreter and running it"
-5,5,5,5,5,5,"with that file as input instead. This is known as creating a script. As your program gets longer, you may want to split it into several files for"
-6,6,6,6,6,6,easier maintenance. You may also want to use a handy function that you’ve written in several programs without copying its definition into
-7,7,7,7,7,7,each program.
-8,8,8,8,8,8,"To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance of the interpreter. Such"
-9,9,9,9,9,9,a file is called a module; definitions from a module can be imported into other modules or into the main module (the collection of variables
-10,10,10,10,10,10,that you have access to in a script executed at the top level and in calculator mode).
-11,11,11,11,11,11,A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py appended. Within a
-12,12,12,12,12,12,"module, the module’s name (as a string) is available as the value of the global variable __name__. For instance, use your favorite text"
-13,13,13,13,13,13,editor to create a file called fibo.py in the current directory with the following contents:
-14,14,14,14,14,14,# Fibonacci numbers module
-15,15,15,15,15,15,def fib(n):    # write Fibonacci series up to n
-16,16,16,16,16,16,"    a, b = 0, 1"
-17,17,17,17,17,17,    while a < n:
-18,18,18,18,18,18,"        print(a, end=' ')"
-19,19,19,19,19,19,"        a, b = b, a+b"
-20,20,20,20,20,20,    print()
-21,21,21,21,21,21,def fib2(n):   # return Fibonacci series up to n
-22,22,22,22,22,22,    result = []
-23,23,23,23,23,23,"    a, b = 0, 1"
-24,24,24,24,24,24,    while a < n:
-25,25,25,25,25,25,        result.append(a)
-26,26,26,26,26,26,"        a, b = b, a+b"
-27,27,27,27,27,27,    return result
-28,28,28,28,28,28,Now enter the Python interpreter and import this module with the following command:
-29,29,29,29,29,29,>>> import fibo
-30,30,30,30,30,30,This does not enter the names of the functions defined in fibo directly in the current symbol table; it only enters the module name fibo
-31,31,31,31,31,31,there. Using the module name you can access the functions:
-32,32,32,32,32,32,>>> fibo.fib(1000)
-33,33,33,33,33,33,0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
-34,34,34,34,34,34,>>> fibo.fib2(100)
-35,35,35,35,35,35,"[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]"
-36,36,36,36,36,36,>>> fibo.__name__
-37,37,37,37,37,37,'fibo'
-38,38,38,38,38,38,If you intend to use a function often you can assign it to a local name:
-39,39,39,39,39,39,>>> fib = fibo.fib
-40,40,40,40,40,40,>>> fib(500)
-41,41,41,41,41,41,0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
-42,42,42,42,42,42,6.1. More on Modules
-43,43,43,43,43,43,A module can contain executable statements as well as function definitions. These statements are intended to initialize the module. They
-44,44,44,44,44,44,are executed only the first time the module name is encountered in an import statement. [1] (They are also run if the file is executed as a
-45,45,45,45,45,45,script.)
-46,46,46,46,46,46,"Each module has its own private symbol table, which is used as the global symbol table by all functions defined in the module. Thus, the"
-47,47,47,47,47,47,author of a module can use global variables in the module without worrying about accidental clashes with a user’s global variables. On
-48,48,48,48,48,48,"the other hand, if you know what you are doing you can touch a module’s global variables with the same notation used to refer to its"
-49,49,49,49,49,49,"functions, modname.itemname."
-50,50,50,50,50,50,Modules can import other modules. It is customary but not required to place all import statements at the beginning of a module (or
-51,51,51,51,51,51,"script, for that matter). The imported module names are placed in the importing module’s global symbol table."
-52,52,52,52,52,52,There is a variant of the import statement that imports names from a module directly into the importing module’s symbol table. For
+,Unnamed: 0,Unnamed: 0.1,Unnamed: 0.1.1,Unnamed: 0.1.1.1,Unnamed: 0.1.1.1.1,Unnamed: 0.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1,id,text
+0,0,0,0,0,0,0,0,0,0,0,3.10.4
+1,1,1,1,1,1,1,1,1,1,1,6. Modules
+2,2,2,2,2,2,2,2,2,2,2,    Go
+3,3,3,3,3,3,3,3,3,3,3,"If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables) are lost. Therefore, if"
+4,4,4,4,4,4,4,4,4,4,4,"you want to write a somewhat longer program, you are better off using a text editor to prepare the input for the interpreter and running it"
+5,5,5,5,5,5,5,5,5,5,5,"with that file as input instead. This is known as creating a script. As your program gets longer, you may want to split it into several files for"
+6,6,6,6,6,6,6,6,6,6,6,easier maintenance. You may also want to use a handy function that you’ve written in several programs without copying its definition into
+7,7,7,7,7,7,7,7,7,7,7,each program.
+8,8,8,8,8,8,8,8,8,8,8,"To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance of the interpreter. Such"
+9,9,9,9,9,9,9,9,9,9,9,a file is called a module; definitions from a module can be imported into other modules or into the main module (the collection of variables
+10,10,10,10,10,10,10,10,10,10,10,that you have access to in a script executed at the top level and in calculator mode).
+11,11,11,11,11,11,11,11,11,11,11,A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py appended. Within a
+12,12,12,12,12,12,12,12,12,12,12,"module, the module’s name (as a string) is available as the value of the global variable __name__. For instance, use your favorite text"
+13,13,13,13,13,13,13,13,13,13,13,editor to create a file called fibo.py in the current directory with the following contents:
+14,14,14,14,14,14,14,14,14,14,14,# Fibonacci numbers module
+15,15,15,15,15,15,15,15,15,15,15,def fib(n):    # write Fibonacci series up to n
+16,16,16,16,16,16,16,16,16,16,16,"    a, b = 0, 1"
+17,17,17,17,17,17,17,17,17,17,17,    while a < n:
+18,18,18,18,18,18,18,18,18,18,18,"        print(a, end=' ')"
+19,19,19,19,19,19,19,19,19,19,19,"        a, b = b, a+b"
+20,20,20,20,20,20,20,20,20,20,20,    print()
+21,21,21,21,21,21,21,21,21,21,21,def fib2(n):   # return Fibonacci series up to n
+22,22,22,22,22,22,22,22,22,22,22,    result = []
+23,23,23,23,23,23,23,23,23,23,23,"    a, b = 0, 1"
+24,24,24,24,24,24,24,24,24,24,24,    while a < n:
+25,25,25,25,25,25,25,25,25,25,25,        result.append(a)
+26,26,26,26,26,26,26,26,26,26,26,"        a, b = b, a+b"
+27,27,27,27,27,27,27,27,27,27,27,    return result
+28,28,28,28,28,28,28,28,28,28,28,Now enter the Python interpreter and import this module with the following command:
+29,29,29,29,29,29,29,29,29,29,29,>>> import fibo
+30,30,30,30,30,30,30,30,30,30,30,This does not enter the names of the functions defined in fibo directly in the current symbol table; it only enters the module name fibo
+31,31,31,31,31,31,31,31,31,31,31,there. Using the module name you can access the functions:
+32,32,32,32,32,32,32,32,32,32,32,>>> fibo.fib(1000)
+33,33,33,33,33,33,33,33,33,33,33,0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
+34,34,34,34,34,34,34,34,34,34,34,>>> fibo.fib2(100)
+35,35,35,35,35,35,35,35,35,35,35,"[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]"
+36,36,36,36,36,36,36,36,36,36,36,>>> fibo.__name__
+37,37,37,37,37,37,37,37,37,37,37,'fibo'
+38,38,38,38,38,38,38,38,38,38,38,If you intend to use a function often you can assign it to a local name:
+39,39,39,39,39,39,39,39,39,39,39,>>> fib = fibo.fib
+40,40,40,40,40,40,40,40,40,40,40,>>> fib(500)
+41,41,41,41,41,41,41,41,41,41,41,0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+42,42,42,42,42,42,42,42,42,42,42,6.1. More on Modules
+43,43,43,43,43,43,43,43,43,43,43,A module can contain executable statements as well as function definitions. These statements are intended to initialize the module. They
+44,44,44,44,44,44,44,44,44,44,44,are executed only the first time the module name is encountered in an import statement. [1] (They are also run if the file is executed as a
+45,45,45,45,45,45,45,45,45,45,45,script.)
+46,46,46,46,46,46,46,46,46,46,46,"Each module has its own private symbol table, which is used as the global symbol table by all functions defined in the module. Thus, the"
+47,47,47,47,47,47,47,47,47,47,47,author of a module can use global variables in the module without worrying about accidental clashes with a user’s global variables. On
+48,48,48,48,48,48,48,48,48,48,48,"the other hand, if you know what you are doing you can touch a module’s global variables with the same notation used to refer to its"
+49,49,49,49,49,49,49,49,49,49,49,"functions, modname.itemname."
+50,50,50,50,50,50,50,50,50,50,50,Modules can import other modules. It is customary but not required to place all import statements at the beginning of a module (or
+51,51,51,51,51,51,51,51,51,51,51,"script, for that matter). The imported module names are placed in the importing module’s global symbol table."
+52,52,52,52,52,52,52,52,52,52,52,There is a variant of the import statement that imports names from a module directly into the importing module’s symbol table. For
