@@ -11,4 +11,5 @@ spacy==3.3.0
 torch==1.11.0
 transformers==4.18.0
 wordcloud==1.8.1
+beautifulsoup4==4.11.1
 SpeechRecognition
