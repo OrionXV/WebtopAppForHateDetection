@@ -1,0 +1,78 @@
+
+.vl {
+  border-left: 2px solid rgb(255, 255, 255);
+  height: 440px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 25%;
+}
+.left_section {
+  width: 42%;
+  float: left;
+  margin-left: 30px;
+  
+}
+.right_section {
+  width: 42%;
+  float: right;
+  margin-right: 30px;
+  
+}
+.link{
+  margin: 87px 0px;
+  margin-left: 20px;
+  font-size: larger;
+
+}
+.csv{
+  margin: 75px 0px;
+  margin-left: 20px;
+  font-size: larger;
+}
+.audio{
+  margin: 80px 0px;
+  margin-right: 20px;
+  font-size: larger;
+}
+.image{
+  margin: 75px 0px;
+  margin-right: 20px;
+  font-size: larger;
+}
+.rightline{
+  margin-right: 20px;
+}
+.leftline{
+  margin-left: 18px;
+} 
+.button{
+  font-weight: 800;
+  font-size: medium;
+  padding: 0px 8px;
+  border: 2px;
+  border-style: solid;
+  border-radius: 12px;
+  border-color: rgb(5, 32, 32);
+  transition: color 0.25s, transform 0.25s, background-color 0.25s;
+}
+.button:hover{
+  transform: scale(1.1);
+  color: rgb(15, 16, 34);
+  background-color: rgb(126, 96, 57);
+  border-color: rgb(15, 16, 34);
+}
+.text_box{
+  font-weight: normal;
+  color: black;
+  padding: 3px 10px;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 4px;
+}
+.button1{
+  color: black;
+  font-weight: bold;
+  padding: 2px 3px;
+}
