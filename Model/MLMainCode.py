@@ -196,7 +196,10 @@ def mainFunc():
     
     extension = 'pth'
     modelWeightsPresent = glob.glob('*.{}'.format(extension))
-    
+    from torch import nn
+    from transformers import BertModel
+    from transformers import BertTokenizer
+    from MLMainCode import BertClassifier
     if modelPresent:
         model = torch.load(newpath / modelPresent[0])
     elif modelWeightsPresent:
