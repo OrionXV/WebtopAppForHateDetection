@@ -174,7 +174,7 @@ def mainFunc():
     if not result:
         raise Exception("DATA NOT FOUND")
     
-    data_path = path + '/' + result[0]
+    data_path = path / result[0]
     data = pd.read_csv(data_path, usecols = [ 'id', 'text'])  
     #temp = data.copy()
     data['orignal_text'] = data['text']
@@ -187,7 +187,7 @@ def mainFunc():
     #data = temp.copy()
     #del temp
     
-    path = Path.cwd().parent
+    path = Path.cwd()
     path = path / 'Model'
     extension = 'pt'
     os.chdir(path)

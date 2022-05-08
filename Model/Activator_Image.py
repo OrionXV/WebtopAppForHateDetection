@@ -4,11 +4,12 @@ import os
 from pathlib import Path
 import glob
 import numpy as np
-from Model.MLMainCode import mainFunc
+#from Model.MLMainCode import mainFunc
 
-from Model.imageToText import imageToText
+"""from Model.imageToText""" 
+import imageToText
 
-path = Path.cwd().parent
+path = Path.cwd()
 extension = ('jpg', 'jpeg', 'png', 'gif') #Can be changed to include JSON
 path = path / 'img_data'
 os.chdir(path)
@@ -28,4 +29,4 @@ df['text'] = text
 
 df.to_csv('Model\input\Input.csv')
 
-mainFunc()
+MLMainCode.mainFunc()
