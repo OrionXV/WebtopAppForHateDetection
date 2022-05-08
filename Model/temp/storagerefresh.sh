@@ -10,3 +10,7 @@ rm *.png
 rm *.jpg
 rm *.jpeg
 rm *.gif
+<<<<<<< Updated upstream:Model/temp/storagerefresh.sh
+=======
+rm *.txt
+>>>>>>> Stashed changes:Model/Temp/storagerefresh.sh
