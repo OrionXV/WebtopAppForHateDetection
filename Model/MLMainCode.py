@@ -1,6 +1,6 @@
-!pip install torch
-!pip install transformers
-!pip install contractions
+#!pip install torch
+#!pip install transformers
+#!pip install contractions
 
 import numpy as np
 import pandas as pd
