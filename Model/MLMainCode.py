@@ -130,7 +130,7 @@ def mainFunc():
 
         return " ".join([token.lemma_ for token in doc])
     
-    def evaluater(model, test_data):
+    def evaluator(model, test_data):
 
         test = Dataset(test_data)
         
@@ -210,6 +210,6 @@ def mainFunc():
     
     data['label'] = np.nan
     
-    submission = evaluater(model, data)
+    submission = evaluator(model, data)
     
     submission.to_csv('/output/results.csv')
